@@ -3,6 +3,8 @@
 ## Descrição
 Este projeto implementa algoritmos de busca informada (A*) e não informada (BFS, DFS) para resolver o problema do 8-puzzle. A implementação utiliza Python e bibliotecas como `pandas`, `math`, `collections`, `random`, `tracemalloc`, e `time` para suporte ao código e à análise de desempenho.
 
+Para mais detalhes sobre o projeto, consulte o [artigo completo (PDF)](Artigo.pdf).
+
 ## Algoritmos Implementados
 - **A\*** (com heurísticas de Manhattan e Euclidiana)
 - **Breadth-First Search (BFS)**
