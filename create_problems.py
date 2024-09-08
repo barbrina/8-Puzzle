@@ -1,20 +1,16 @@
 import random
 
 def is_solvable(puzzle):
-    # Flatten the puzzle
     flat_puzzle = [num for row in puzzle for num in row]
-    # Count inversions
     inversions = 0
     for i in range(len(flat_puzzle)):
         for j in range(i + 1, len(flat_puzzle)):
             if flat_puzzle[i] > flat_puzzle[j] != 0:
                 inversions += 1
-    # A puzzle is solvable if the number of inversions is even
     return inversions % 2 == 0
 
 def generate_puzzle():
     while True:
-        # Generate a random permutation of the 8-puzzle
         numbers = list(range(9))
         random.shuffle(numbers)
         puzzle = [numbers[i:i+3] for i in range(0, 9, 3)]
@@ -43,10 +39,8 @@ def save_puzzles_to_file(puzzles, filename="8puzzles.txt"):
                 file.write(f"{row}\n")
             file.write("\n")
 
-# Generate 10 different 8-puzzles
 puzzles = generate_multiple_puzzles(30)
 
-# Save them to a text file
 save_puzzles_to_file(puzzles, "8puzzles.txt")
 
 print("Puzzles saved to 8puzzles.txt")
